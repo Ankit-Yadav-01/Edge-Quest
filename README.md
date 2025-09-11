@@ -19,6 +19,7 @@ Features
 
 ---
 How to Play
+
     1. Run the program in a terminal.
     2. Enter an odd-sized grid (n x n).
     3. The maze is displayed with:
@@ -26,20 +27,17 @@ How to Play
         Directions (L, R, U, D) for the 8 neighboring cells.
         # for hidden cells.
     4. Controls:
-        U → move up
-        L → move left
-        D → move down
-        R → move right
-        H → use a hint to locate the key
-    
+        U  move up
+        L  move left
+        D  move down
+        R  move right
+        H  use a hint to locate the key
     5. Rules:
-
         Only one cell direction is globally correct.
         Following the correct direction may flip a neighbor cell to correct.
         Following a wrong direction may flip neighbor cells to wrong.
         Power decreases on wrong moves. Game over if power < 0.
         Player must collect the hidden key before attempting to exit.
-
     6. Game ends when:
         Player exits correctly with the key.
         Power drops below zero.
