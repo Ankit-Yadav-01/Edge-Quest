@@ -229,6 +229,27 @@ int main(){
     srand(time(NULL));
     int level = 0;
 
+    cout << "Have you played this game before? (y/n): ";
+    string response;
+    getline(cin, response);
+
+    if(!response.empty() && (response[0]=='y' || response[0]=='Y')){
+        cout << "What is the maximum level you have reached? ";
+        int maxLevel;
+        cin >> maxLevel;
+        cin.ignore(); // clear newline from buffer
+
+        cout << "Do you want to continue from level " << maxLevel << "? (y/n): ";
+        string cont;
+        getline(cin, cont);
+
+        if(!cont.empty() && (cont[0]=='y' || cont[0]=='Y')){
+            level = maxLevel;
+        } else {
+            level = 0;
+        }
+    }
+
     while(true){
         n = 5 + 2*level;
         powerLeft = (n+1)/2;
