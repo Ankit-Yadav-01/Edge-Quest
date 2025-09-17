@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+#instructions-container {
+    display: flex;
+    justify-content: center;      /* center horizontally */
+    align-items: center;          /* center vertically */
+    text-align: center;
+    min-height: 250px;            /* enough height for centering */
+    padding: 20px 30px;
+    box-sizing: border-box;
+    background: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    margin: 20px auto;
+    max-width: 600px;             /* keeps it from being too wide */
+}
+
+#instructions {
+    white-space: pre-wrap;        /* preserve line breaks */
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: #333;
+}
+
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.cell.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cell.incorrect {
+    background-color: #f44336;
+    color: white;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#instructions {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}

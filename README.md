@@ -56,21 +56,10 @@ Terminal/Command Prompt to run the console application
 
 ---
 
-How to Run
-
-    1. Clone the repository:
-        git clone https://github.com/Ankit-Yadav-01/Edge-Quest.git
-
-    2. Navigate to the project folder:
-        cd Edge-Quest
-
-    3. Compile the program:
-        g++ Edge-Quest.cpp -o Edge-Quest
-
-    4. Run the game:
-        ./Edge-quest
-
-
+Prerequisites
+- Modern web browser with WebAssembly support
+- CMake (for building from source)
+- Emscripten SDK (for WebAssembly compilation)
 
 
 
@@ -86,3 +75,23 @@ Makes extensive use of ANSI escape codes to clear the screen dynamically. May re
 
 
 ---
+
+Project Structure
+
+```
+Edge-Quest/
+├── src/
+│   ├── Edge-Quest.cpp    # Core game mechanics and algorithms
+│   ├── Edge-Quest.h      # Header file with function declarations
+│   └── main.cpp          # Emscripten bindings and entry point
+├── web/
+│   ├── index.html        # Main game interface
+│   ├── style.css         # Game styling and layout
+│   ├── game.js           # JavaScript game logic and WebAssembly integration
+│   ├── edge-quest.js     # Emscripten-generated JavaScript bindings
+│   └── edge-quest.wasm   # Compiled WebAssembly module
+├── scripts/
+│   └── build.sh          # Build automation script
+├── CMakeLists.txt        # CMake build configuration
+└── README.md             # This documentation
+```
